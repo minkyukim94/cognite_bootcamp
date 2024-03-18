@@ -67,31 +67,44 @@ bootstrap:
 
 
 
+    idp-cdf-mappings:
+    # Support multiple CDF Projects, like dev/test/prod in one config.
+    - cdf-project: bootcamp-65-test-admin-app # i.e. bootcamp-01-test
+        mappings:
+        - cdf-group: cdf:root
+            idp-source-id: b45e1f07-5883-45a2-80c8-43cbea62e0e1
+            idp-source-name: bootcamp-65-test-admin
+        - cdf-group: cdf:all:owner
+            idp-source-id: ae4b812b-b80c-4dc2-9247-3caa4bd081c4 # for the AAD Group to be matched to cdf-group
+            idp-source-name: bootcamp-65-test-all-owner-app # i.e. bootcamp-01-test-all-owner
+
     namespaces:
-        # Typical config will have a namespace for data sources ("src") and a namespace for use cases ("uc")
-        - ns-name: src
-          description: Data sources for the Ice Cream Factory # HINT
+    # Typical config will have a namespace for data sources ("src") and a namespace for use cases ("uc")
+    - ns-name: src
+        description: Data sources for the Ice Cream Factory # HINT
 
-          # Node names will normally follow src:001:srcname or uc:001:usecasename naming convention
-          ns-nodes:
-              - node-name: src:001:sap
-                description: Data from SAP # HINT
-        # HINT: Add another namespace below
-          ns-nodes:
-              - node-name: src:002:opcua
-                description: Data from OPCUA
+        # Node names will normally follow src:001:srcname or uc:001:usecasename naming convention
+        ns-nodes:
+        - node-name: src:001:sap
+            description: Data from SAP # HINT
 
+    # Add another namespace below
+    - ns-name: src
+        description: Data sources for the Ice Cream Factory # HINT
+        ns-nodes:
+        - node-name: src:002:opcua
+            description: Data from OPCUA
 
-        # Typical config will have separate namespace by data source ("src") and use cases ("uc")
-        - ns-name: uc
+    # Typical config will have separate namespace by data source ("src") and use cases ("uc")
+    - ns-name: uc
         description: Use cases representing the data/products
 
         # Description names will normally follow src:001:srcname or uc:001:usecasename naming convention
         ns-nodes:
-            - node-name: uc:001:oee
+        - node-name: uc:001:oee
             description: Use case 001 Over all Equipment effectiveness
             shared-access:
-                read:
+            read:
                 - node-name: src:001:sap
                 - node-name: src:002:opcua
 
