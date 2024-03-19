@@ -69,22 +69,23 @@ bootstrap:
 
     namespaces:
     - ns-name: src
-        description: Sources used for data
-        ns-nodes:
+      description: Sources used for data
+      ns-nodes:
         - node-name: src:001:sap
-            description: Data from SAP
+          description: Data from SAP
         - node-name: src:002:opcua
-            description: Data from OPCUA
+          description: Data from OPCUA
 
     - ns-name: uc
-        description: Use cases representing the data/products
-        ns-nodes:
+      description: Use cases representing the data/products
+      ns-nodes:
         - node-name: uc:001:oee
-            description: Use case 001 - Overall Equipment Effectiveness
-            shared-access:
+          description: Use case 001 - Overall Equipment Effectiveness
+          shared-access:
             read:
                 - node-name: src:001:sap
                 - node-name: src:002:opcua
+
 
 
 # de-facto standards for CDF CogniteClient and logger configuration.
