@@ -26,9 +26,9 @@ extpipe-pattern: '{source}:{short-name}:{rawtable-name}:{suffix}'
 
 # can contain multiple contacts, can be overwritten on pipeline level
 default-contacts:
-    - name: <Contact name>
-      email: <Contact email>
-      role: <Role name>
+    - name: Min Kim
+      email: minkyu.kim@worley.com
+      role: tech evangelist
       send-notification: true
 
 rawdbs:
@@ -48,7 +48,7 @@ rawdbs:
 
 rawdbs:
   - rawdb-name: src:002:opcua:db
-    dataset-external-id: src:002:opcua:db
+    dataset-external-id: src:002:opcua:ds
     short-name: opcua
     rawtables:
       - rawtable-name: datapoints
