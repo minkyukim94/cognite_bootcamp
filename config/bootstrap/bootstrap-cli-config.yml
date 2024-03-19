@@ -68,6 +68,17 @@ bootstrap:
                 idp-source-id: ab5fd384-afb0-44bc-b6fa-5f1343e4976f
                 idp-source-name: bootcamp-65-test-all-read
 
+        - cdf-project: cdf-bootcamp-65-prod # i.e. bootcamp-01-test
+          mappings:
+              - cdf-group: cdf:root
+                idp-source-id: 7799d835-f942-41ba-a264-0c57f10465c2
+                idp-source-name: bootcamp-65-prod-admin
+              - cdf-group: cdf:all:owner
+                idp-source-id: ccd5f8c2-b026-4b8b-afca-4e25988a53d7
+                idp-source-name: bootcamp-65-prod-all-owner 
+              - cdf-group: cdf:all:read
+                idp-source-id: 66f0be4d-f48a-4763-a287-d21448959c88
+                idp-source-name: bootcamp-65-prod-all-read
 
     namespaces:
     - ns-name: src
