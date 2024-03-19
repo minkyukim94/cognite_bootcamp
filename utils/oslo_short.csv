@@ -1,0 +1,6 @@
+,name,external_id,description,labels,metadata,parent_external_id
+0,Oslo,oslo,"Site in Oslo, Norway",['isa95:site'],"{'site': 'Oslo', 'country': 'Norway', 'size': 'sm', 'src': 'sap'}",
+1,Cold Store,oslo_cold_store,,['isa95:area'],"{'Max temperature': '-25 degrees', 'Max capability': '4000L', 'site': 'Oslo', 'src': 'sap', 'type': 'cold_store'}",oslo
+2,Production,oslo_production,,['isa95:area'],"{'site': 'Oslo', 'src': 'sap', 'type': 'production'}",oslo
+3,Filling Line,oslo_production_fill,,['isa95:production_line'],"{'Connections': '3 ~ 400 V, 50-60 Hz', 'Total consumption': 'Depending on filler setup', 'Main breaker': '50 A', 'Supply pressure': '6 bar', 'Total consumption VN': 'Depending on filler setup', 'Consumption (during cleaning)': '50 l/min', 'site': 'Oslo', 'src': 'sap', 'type': 'filling_line'}",oslo_production
+4,Lid Dispensing,OPFLD988,,"['isa95:unit', 'function:dispense']","{'cycle time': '3 s', 'site': 'Oslo', 'src': 'sap', 'type': 'lid_dispensing'}",oslo_production_fill
