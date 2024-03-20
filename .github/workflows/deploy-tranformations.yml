@@ -3,7 +3,6 @@ name: Deploy transformations
 
 on:
     push:
-        #branches: [main]
         branches: [main]
         paths:
             - config/transformations/**
